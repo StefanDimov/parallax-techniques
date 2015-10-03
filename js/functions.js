@@ -4,9 +4,15 @@
     "use strict";
 
     var $window = $(window);
+
+    // header vars
     var $birdLogo = $('.logo');
     var $backBirdPic = $('.back-bird');
     var $foreBirdPic = $('.fore-bird');
+
+    // clothes-pics vars
+    var $clothesPicsContainer = $('.clothes-pics');
+    var $clothesFigures = $('.clothes-pics figure ');
 
     // bind on window scroll event
     $window.scroll(function (scrollEvent) {
@@ -31,6 +37,24 @@
         $foreBirdPic.css({
             'transform': 'translate(0px, -' + (windowScrollTopPosition / 40) + '% )'
         });
+
+        // Clothes Landing Elements
+        // -----------------------------------------
+
+        // pixels scrolled from the top > clothes pics pixels from the top - (windows height / 1.2)
+        if (windowScrollTopPosition > $clothesPicsContainer.offset().top - ($window.height() / 1.2)) {
+
+            // each of the clothes pictures
+            $clothesFigures.each(function (i) {
+
+                // to apear 100 mils times the its index
+                var millsOffset = i * 100;
+
+                setTimeout(function () {
+                    $clothesFigures.eq(i).addClass('is-showing');
+                }, millsOffset);
+            });
+        }
     });
 
 }(jQuery));

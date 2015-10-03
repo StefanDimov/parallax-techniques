@@ -3,22 +3,24 @@ Base Styles
 ------------------------------------- */
 
 h1 {
-
     color: #ccc;
     font-weight: 300;
 }
 
 figure {
-
     margin: auto;
 }
 
 .content article {
-
     padding: 100px 0;
     max-width: 640px;
     margin: 0 auto;
     text-align: center;
+}
+
+img {
+
+    max-width: 100%;
 }
 
 /* -------------------------------------
@@ -26,7 +28,6 @@ Header Parallax - Bird Box
 ------------------------------------- */
 
 .bird-box {
-
     position: relative;
     height: 600px;
     background-image: url('/images/bird-bg.jpg');
@@ -37,7 +38,6 @@ Header Parallax - Bird Box
 }
 
 .logo {
-
     height: 100px;
     width: 100%;
     background-image: url('/images/bird-logo.svg');
@@ -69,5 +69,24 @@ Header Parallax - Bird Box
     position: absolute;
     left: 50%;
     margin-left: -480px;
-
 }
+
+/* -------------------------------------
+Landing Elements - Clothes Pics
+------------------------------------- */
+
+.clothes-pics figure {
+
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.3s ease-in-out;
+}
+
+.clothes-pics figure.is-showing {
+
+    opacity: 1;
+    transform: translateX(0px);
+}
+
