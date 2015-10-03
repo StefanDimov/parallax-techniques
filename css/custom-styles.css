@@ -1,0 +1,73 @@
+/* -------------------------------------
+Base Styles
+------------------------------------- */
+
+h1 {
+
+    color: #ccc;
+    font-weight: 300;
+}
+
+figure {
+
+    margin: auto;
+}
+
+.content article {
+
+    padding: 100px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* -------------------------------------
+Header Parallax - Bird Box
+------------------------------------- */
+
+.bird-box {
+
+    position: relative;
+    height: 600px;
+    background-image: url('/images/bird-bg.jpg');
+    background-size: auto 600px;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.logo {
+
+    height: 100px;
+    width: 100%;
+    background-image: url('/images/bird-logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.fore-bird {
+    width: 960px;
+    height: 733px;
+    background-image: url('/images/fore-bird.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    top: 380px;
+    left: 50%;
+    margin-left: -480px;
+}
+
+.back-bird {
+    width: 960px;
+    height: 298px;
+    background-image: url('/images/back-bird.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+
+}
