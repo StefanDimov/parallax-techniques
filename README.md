@@ -17,3 +17,7 @@
 ## The Periscope
 
 - Looks like a big window in the page, with a fixed image inside
+
+## Zooming Thumbnails
+
+- On Picture hover - zoom in picture and show caption
