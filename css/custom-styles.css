@@ -22,6 +22,10 @@ img {
     max-width: 100%;
 }
 
+.font-sm {
+
+    font-size: 0.8em;
+}
 
 /* -------------------------------------
 Header Parallax - Bird Box
@@ -113,12 +117,10 @@ Zooming Thumbnails - Clothes Pics
 }
 
 .clothes-pics figure:hover img {
-
     transform: scale(1.1);
 }
 
 .clothes-pics figure:hover figcaption {
-
     transform: translateX(0px);
 }
 
@@ -133,7 +135,60 @@ The Periscope - Large Window
     margin: 0 auto;
     background-image: url('/images/model2.jpg');
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: 50% -50%;
     background-attachment: fixed;
+    background-color: #CCC;
     border-radius: 50%;
+    position: relative;
+}
+
+.large-window-tint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.large-window-text {
+    text-align: center;
+    color: white;
+}
+
+.large-window-text-heading {
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+.large-window-text-before-price {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.large-window-text-price {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.large-window-button {
+
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em 0;
+    border: 1px solid white;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.large-window-button:hover {
+
+    background-color: white;
+    color: black;
 }

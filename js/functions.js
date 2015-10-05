@@ -1,4 +1,4 @@
-/* globals jQuery */
+/* globals jQuery, setTimeout */
 
 (function ($) {
     "use strict";
@@ -13,6 +13,10 @@
     // clothes-pics vars
     var $clothesPicsContainer = $('.clothes-pics');
     var $clothesFigures = $('.clothes-pics figure ');
+
+    // large window vars
+    var $largeWindow = $('.large-window');
+    var $largeWindowTint = $('.large-window-tint');
 
     // bind on window scroll event
     $window.scroll(function (scrollEvent) {
@@ -53,6 +57,20 @@
                 setTimeout(function () {
                     $clothesFigures.eq(i).addClass('is-showing');
                 }, millsOffset);
+            });
+        }
+
+        // Large Window - Periscope
+        // -----------------------------------------
+
+        if (windowScrollTopPosition > $largeWindow.offset().top - ($window.height() / 1.2)) {
+
+            // made-up formula, don't look for logic, though it probably has some O_O
+            var opacityValue = (windowScrollTopPosition - ($largeWindow.offset().top / 2)) / 300;
+
+            $largeWindowTint.css({
+
+                opacity: opacityValue
             });
         }
     });

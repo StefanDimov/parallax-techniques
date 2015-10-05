@@ -17,6 +17,7 @@
 ## The Periscope
 
 - Looks like a big window in the page, with a fixed image inside
+- When the users scrolls further down, the image darkens and text and button appear
 
 ## Zooming Thumbnails
 
